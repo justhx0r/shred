@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/lu4p/shred"
+	"github.com/justhx0r/shred"
 )
 
 func Example() {

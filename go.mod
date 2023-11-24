@@ -1,3 +1,3 @@
-module github.com/lu4p/shred
+module github.com/justhx0r/shred
 
 go 1.15

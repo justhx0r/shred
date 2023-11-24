@@ -1,6 +1,6 @@
-[![GoDoc](https://godoc.org/github.com/lu4p/shred?status.svg)](https://godoc.org/github.com/lu4p/shred)
-[![License](https://img.shields.io/github/license/lu4p/shred.svg)](https://unlicense.org/)
-[![Go Report Card](https://goreportcard.com/badge/github.com/lu4p/shred)](https://goreportcard.com/report/github.com/lu4p/shred)
+[![GoDoc](https://godoc.org/github.com/justhx0r/shred?status.svg)](https://godoc.org/github.com/lu4p/shred)
+[![License](https://img.shields.io/github/license/justhx0r/shred.svg)](https://unlicense.org/)
+[![Go Report Card](https://goreportcard.com/badge/github.com/justhx0r/shred)](https://goreportcard.com/report/github.com/lu4p/shred)
 # shred
  Package shred is a golang library to mimic the functionality of the linux `shred` command
  
@@ -8,7 +8,7 @@
 ```golang
 package main
 import (
-  "github.com/lu4p/shred"
+  "github.com/justhx0r/shred"
 )
 
 func main(){
@@ -19,5 +19,5 @@ func main(){
 
 ## Installation
 ```
-go get -u github.com/lu4p/shred 
+go get -u github.com/justhx0r/shred 
 ```
