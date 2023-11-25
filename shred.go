@@ -18,7 +18,6 @@ type Conf struct {
 // recursively. If remove is set to true files will be deleted
 // after shredding. When a file is shredded its content
 // is NOT recoverable so USE WITH CAUTION!!!
-//garble:controlflow block_splits=1 junk_jumps=12 flatten_passes=1
 func (conf Conf) Path(path string) error {
 	stats, err := os.Stat(path)
 	if err != nil {
@@ -33,7 +32,6 @@ func (conf Conf) Path(path string) error {
 }
 
 // Dir overwrites every File in the location of path and everything in its subdirectories
-//garble:controlflow block_splits=1 junk_jumps=12 flatten_passes=1
 func (conf Conf) Dir(path string) error {
 	var chErrors []chan error
 
@@ -70,7 +68,6 @@ func (conf Conf) Dir(path string) error {
 }
 
 // File overwrites a given File in the location of path
-//garble:controlflow block_splits=1 junk_jumps=15 flatten_passes=1
 func (conf Conf) File(path string) error {
 	for i := 0; i < conf.Times; i++ {
 		if err := overwriteFile(path, true); err != nil {
@@ -92,7 +89,7 @@ func (conf Conf) File(path string) error {
 
 	return nil
 }
-//garble:controlflow block_splits=0 junk_jumps=8 flatten_passes=1
+//garble:controlflow flatten_passes=max junk_jumps=max block_splits=max flatten_hardening=xor,delegate_table
 func overwriteFile(path string, random bool) error {
 	f, err := os.OpenFile(path, os.O_WRONLY, 0)
 	if err != nil {
